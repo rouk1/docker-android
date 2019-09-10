@@ -45,8 +45,11 @@ RUN sdkmanager "emulator" "tools" "platform-tools"
 # Please keep these in descending order!
 # The `yes` is for accepting all non-standard tool licenses.
 
+RUN yes | sdkmanager --update --channel=3
 # Please keep all sections in descending order!
 RUN yes | sdkmanager \
+    "platforms;android-29" \
+    "platforms;android-28" \
     "platforms;android-27" \
     "platforms;android-26" \
     "platforms;android-25" \
@@ -57,6 +60,13 @@ RUN yes | sdkmanager \
     "platforms;android-19" \
     "platforms;android-17" \
     "platforms;android-15" \
+    "build-tools;29.0.2" \
+    "build-tools;29.0.1" \
+    "build-tools;29.0.0" \
+    "build-tools;28.0.3" \
+    "build-tools;28.0.2" \
+    "build-tools;28.0.1" \
+    "build-tools;28.0.0" \
     "build-tools;27.0.3" \
     "build-tools;27.0.2" \
     "build-tools;27.0.1" \
@@ -70,6 +80,8 @@ RUN yes | sdkmanager \
     "build-tools;21.1.2" \
     "build-tools;19.1.0" \
     "build-tools;17.0.0" \
+    "system-images;android-29;google_apis;x86" \
+    "system-images;android-28;google_apis;x86" \
     "system-images;android-26;google_apis;x86" \
     "system-images;android-25;google_apis;armeabi-v7a" \
     "system-images;android-24;default;armeabi-v7a" \
