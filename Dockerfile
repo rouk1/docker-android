@@ -13,8 +13,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
     libncurses5:i386 \
     libz1:i386 \
     locales \
-    python2.7 \
-    python2.7-dev \
     libssl-dev \
     ssh \
     wget \
@@ -95,10 +93,6 @@ RUN yes | sdkmanager \
     "add-ons;addon-google_apis-google-23" \
     "add-ons;addon-google_apis-google-22" \
     "add-ons;addon-google_apis-google-21"
-
-RUN ln -s /usr/bin/python2.7 /usr/bin/python
-RUN locale-gen en_US.UTF-8
-ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
 
 # Cleaning
 RUN apt-get clean
